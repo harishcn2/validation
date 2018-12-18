@@ -1,0 +1,789 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+	<title>Jquery Validation Examples</title>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
+	<!-- VENDOR CSS -->
+	<link rel="stylesheet" href="assets/vendor/bootstrap/css/bootstrap.min.css">
+	<link rel="stylesheet" href="assets/vendor/font-awesome/css/font-awesome.min.css">
+	<link rel="stylesheet" href="assets/vendor/linearicons/style.css">
+	<!-- MAIN CSS -->
+	<link rel="stylesheet" href="assets/css/datepicker.css">
+	<link rel="stylesheet" href="assets/css/datetimepicker.css">
+	<link rel="stylesheet" href="assets/css/bootstrap-select.css">
+	<link rel="stylesheet" href="assets/css/main.css">
+	<!-- FOR DEMO PURPOSES ONLY. You should remove this in your project -->
+	<link rel="stylesheet" href="assets/css/demo.css">
+	<!-- GOOGLE FONTS -->
+	<link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,600,700" rel="stylesheet">
+	<!-- ICONS -->
+	<link rel="apple-touch-icon" sizes="76x76" href="assets/img/apple-icon.png">
+	<link rel="icon" type="image/png" sizes="96x96" href="assets/img/favicon.png">
+</head>
+
+<body class="layout-fullwidth">
+	<!-- WRAPPER -->
+	<div id="wrapper">
+		<!-- NAVBAR -->
+		<nav class="navbar navbar-default navbar-fixed-top">
+			<div class="brand">
+				<a href="index.html"><span style="color: #596678;font-size: 30px;">Jquery Validation Examples</span></a>
+			</div>
+		</nav>
+		<!-- END NAVBAR -->
+		<!-- LEFT SIDEBAR -->
+		<div id="sidebar-nav" class="sidebar">
+			<div class="sidebar-scroll">
+				<nav>
+					<ul class="nav">
+						<li><a href="index.html" class=""><i class="lnr lnr-home"></i> <span>Dashboard</span></a></li>
+						<li><a href="elements.html" class="active"><i class="lnr lnr-code"></i> <span>Elements</span></a></li>
+						<li><a href="charts.html" class=""><i class="lnr lnr-chart-bars"></i> <span>Charts</span></a></li>
+						<li><a href="panels.html" class=""><i class="lnr lnr-cog"></i> <span>Panels</span></a></li>
+						<li><a href="notifications.html" class=""><i class="lnr lnr-alarm"></i> <span>Notifications</span></a></li>
+						<li>
+							<a href="#subPages" data-toggle="collapse" class="collapsed"><i class="lnr lnr-file-empty"></i> <span>Pages</span> <i class="icon-submenu lnr lnr-chevron-left"></i></a>
+							<div id="subPages" class="collapse ">
+								<ul class="nav">
+									<li><a href="page-profile.html" class="">Profile</a></li>
+									<li><a href="page-login.html" class="">Login</a></li>
+									<li><a href="page-lockscreen.html" class="">Lockscreen</a></li>
+								</ul>
+							</div>
+						</li>
+						<li><a href="tables.html" class=""><i class="lnr lnr-dice"></i> <span>Tables</span></a></li>
+						<li><a href="typography.html" class=""><i class="lnr lnr-text-format"></i> <span>Typography</span></a></li>
+						<li><a href="icons.html" class=""><i class="lnr lnr-linearicons"></i> <span>Icons</span></a></li>
+					</ul>
+				</nav>
+			</div>
+		</div>
+		<!-- END LEFT SIDEBAR -->
+		<!-- MAIN -->
+		<div class="main">
+			<!-- MAIN CONTENT -->
+			<div class="main-content">
+				<div class="container-fluid">
+					<div class="row">
+						<div class="col-md-12">
+							<!-- INPUTS -->
+							<div class="panel">
+								<div class="panel-heading">
+									<h3 class="panel-title">Basic Validations</h3>
+								</div>
+								<div class="panel-body">
+									<form class="sample-form" id="sample-form">
+									  <div class="row">
+											<div class="col-md-6">
+												<div class="form-group element-container">
+													<input type="text" name="firstname" input-name="First Name" class="form-control trimonfocusout makecapitalize" placeholder="First Name">
+												</div>
+											</div>
+											<div class="col-md-6">
+												<div class="form-group element-container">
+													<input type="text" name="middlename" input-name="Middle Name" class="form-control makecapitalize trimonfocusout" placeholder="Middle Name">
+												</div>
+											</div>
+										</div>
+										<div class="row">
+											<div class="col-md-6">
+												<div class="form-group element-container">
+													<input type="text" name="lastname" input-name="Last Name" class="form-control trimonfocusout makecapitalize" placeholder="Last Name">
+												</div>
+											</div>
+									  	<div class="col-md-6">
+									  		<div class="form-group element-container">
+													<input type="text" name="age" input-name="Age" class="form-control" placeholder="Age">
+												</div>
+											</div>
+										</div>
+										<div class="row">
+											<div class="col-md-6">
+												<div class="form-group element-container">
+												    <span class="datepicker_default date-picker">
+												    	<input type="text" class="form-control" name="dob" placeholder="DOB">
+												    	<span class="date_picker_trigger"><i class="fa fa-calendar" aria-hidden="true"></i></span>
+												    </span>
+												</div>
+									  	</div>
+											<div class="col-md-6">
+												<div class="form-group element-container">
+													<label class="fancy-radio">
+														<input name="gender" value="male" type="radio">
+														<span><i></i>Male</span>
+													</label>
+													<label class="fancy-radio">
+														<input name="gender" value="female" type="radio">
+														<span><i></i>Female</span>
+													</label>
+												</div>
+											</div>
+										</div>
+										<div class="row">
+											<div class="col-md-6">
+												<div class="form-group element-container">
+													<input type="password" name="password" id="password" class="form-control" placeholder="Password">
+												</div>
+											</div>
+											<div class="col-md-6">
+												<div class="form-group element-container">
+													<input type="password" name="confirmpassword" class="form-control" placeholder="Confirm Password">
+												</div>
+											</div>
+										</div>
+										<div class="row">
+											<div class="col-md-6">
+												<div class="form-group element-container">
+													<input type="email" name="email" class="form-control" placeholder="Email Id" id="email">
+												</div>
+											</div>
+											<div class="col-md-6">
+												<div class="form-group element-container">
+													<input type="email" name="confirm-email" class="form-control" placeholder="Confirm Email Id">
+												</div>
+											</div>
+										</div>
+										<div class="row">
+											<div class="col-md-6">
+												<div class="form-group element-container">
+													<textarea class="form-control" name="address" placeholder="Address" rows="4"></textarea>
+												</div>
+											</div>
+											<div class="col-md-6">
+												<div class="form-group element-container">
+													<select class="selectpicker" name="country" title="Select Country" data-width="100%" data-live-search="true">
+														<option value="AFG">Afghanistan</option>
+														<option value="ALA">Åland Islands</option>
+														<option value="ALB">Albania</option>
+														<option value="DZA">Algeria</option>
+														<option value="ASM">American Samoa</option>
+														<option value="AND">Andorra</option>
+														<option value="AGO">Angola</option>
+														<option value="AIA">Anguilla</option>
+													</select>
+												</div>
+											</div>
+										</div>
+										<div class="row">
+											<div class="col-md-6">
+												<div class="form-group element-container">
+													<select class="selectpicker" name="statecounty" title="Select State/County" data-width="100%" data-live-search="true">
+														<option value="AFG">Afghanistan</option>
+														<option value="ALA">Åland Islands</option>
+														<option value="ALB">Albania</option>
+														<option value="DZA">Algeria</option>
+														<option value="ASM">American Samoa</option>
+														<option value="AND">Andorra</option>
+														<option value="AGO">Angola</option>
+														<option value="AIA">Anguilla</option>
+														<option value="ATA">Antarctica</option>
+														<option value="ATG">Antigua and Barbuda</option>
+														<option value="ARG">Argentina</option>
+													</select>
+												</div>
+											</div>
+											<div class="col-md-6">
+												<div class="form-group element-container">
+													<select class="selectpicker" name="city" title="Select City" data-width="100%" data-live-search="true">
+														<option value="1518">Adityanagar</option>
+														<option value="1519">Adityapatna</option>
+														<option value="1520">Afzalpur</option>
+														<option value="1521">Ajjampur</option>
+														<option value="1522">Aland</option>
+														<option value="1523">Almatti Sitimani</option>
+														<option value="1524">Alnavar</option>
+														<option value="1525">Alur</option>
+														<option value="1526">Ambikanagara</option>
+														<option value="1527">Anekal</option>
+														<option value="1528">Ankola</option>
+														<option value="1529">Annigeri</option>
+														<option value="1530">Arkalgud</option>
+													</select>
+												</div>
+											</div>
+										</div>
+										<div class="row">
+											<div class="col-md-6">
+												<div class="form-group element-container">
+													<input type="text" name="post-code" class="form-control trimonfocusout" placeholder="Post Code">
+												</div>
+											</div>
+											<div class="col-md-6">
+												<div class="form-group element-container">
+													<input type="text" name="phonenumber" class="form-control" placeholder="Phone Number">
+												</div>
+											</div>
+										</div>
+										<div class="row">
+											<div class="col-md-6">
+												<div class="form-group element-container">
+													<input type="text" name="websiteurl" class="form-control" placeholder="Website URL">
+												</div>
+											</div>
+											<div class="col-md-6">
+												<div class="form-group element-container">
+													<input type="text" name="companyname" class="form-control" placeholder="Company Name">
+												</div>
+											</div>
+										</div>
+										<div class="row">
+											<div class="col-md-6">
+												<div class="form-group element-container">
+													<input type="text" name="amount" class="form-control" placeholder="Amount">
+												</div>
+											</div>
+											<div class="col-md-6">
+												<div class="form-group element-container">
+													<div id="FileUpload">
+													    <input type="file" name="file" class="form-control" id="BrowserHidden" onchange="getElementById('FileField').value = getElementById('BrowserHidden').value;" />
+													    <div id="BrowserVisible"><input type="text" id="FileField"  placeholder="Choose image"></div>
+													</div>
+												</div>
+											</div>
+										</div>
+										<div class="row">
+											<div class="col-md-6">
+												<div class="form-group element-container">
+													<textarea class="form-control" name="summarydescription" placeholder="Summary/Description" rows="4"></textarea>
+												</div>
+											</div>
+											<div class="col-md-6">
+												<div class="form-group element-container">
+													<select name="listbox" class="form-control" multiple="multiple">
+														<option value="m_sl">Mercedes SL</option>
+														<option value="o_c">Opel Corsa</option>
+														<option value="vw_p">VW Polo</option>
+														<option value="t_s">Titanic Skoda</option>
+													</select>
+												</div>
+											</div>
+										</div>
+										<div class="row">
+											<div class="col-md-6 check_box_group element-container">
+												<label class="fancy-checkbox">
+													<input type="checkbox" name="check">
+													<span>Checkbox 1</span>
+												</label>
+												<label class="fancy-checkbox">
+													<input type="checkbox" name="check">
+													<span>Checkbox 2</span>
+												</label>
+												<label class="fancy-checkbox">
+													<input type="checkbox" name="check">
+													<span>Checkbox 3</span>
+												</label>
+												<label class="fancy-checkbox">
+													<input type="checkbox" name="check">
+													<span>Checkbox 4</span>
+												</label>
+											</div>
+										</div>
+										<div class="row">
+											<div class="col-md-12">
+												<div class="form-group element-container">
+													<button type="submit" id="btn-submit" class="btn btn-primary">Submit</button>
+													<button type="reset" class="btn btn-default">Reset</button>
+												</div>
+											</div>
+										</div>
+									</form>
+								</div>
+							</div>
+							<!-- END INPUTS -->
+						</div>
+					</div>
+				</div>
+			</div>
+			<!-- END MAIN CONTENT -->
+		</div>
+		<!-- END MAIN -->
+		<div class="clearfix"></div>
+		<footer>
+			<div class="container-fluid text-center">
+				<p class="copyright text-center">&copy; 2017 <a href="https://www.themeineed.com" target="_blank">Theme I Need</a>. All Rights Reserved.</p>
+			</div>
+		</footer>
+	</div>
+	<!-- END WRAPPER -->
+	<!-- Javascript -->
+	<script src="assets/vendor/jquery/jquery.min.js"></script>
+	<script src="assets/vendor/bootstrap/js/bootstrap.min.js"></script>
+	<script src="assets/vendor/jquery-slimscroll/jquery.slimscroll.min.js"></script>
+	<script src="assets/scripts/klorofil-common.js"></script>
+	<script src="assets/scripts/jquery.validate.js"></script>
+	<script src="assets/vendor/bootstrap-select/bootstrap-select.js"></script>
+	<script src="assets/vendor/date_time_picker/bootstrap-datepicker.js"></script>
+	<script src="assets/vendor/date_time_picker/bootstrap-datetimepicker.min.js"></script>
+	<script src="assets/vendor/hideshowpassword/hideShowPassword.min.js"></script>
+
+
+
+	<script type="text/javascript">
+		// select picker script 	
+	  $('.selectpicker').selectpicker({
+	    style: 'form-control',
+	    size: 5
+	  });
+
+	  // this will validate select on change
+	  $('select').change(function(){
+	    if ($(this).val()!="")
+	    {
+	      $(this).valid();
+	    }
+    });
+
+	  $('#password').hidePassword(true);
+
+	  /**** initiate the datepickers ****/
+	  // $('.date-timepicker input').datetimepicker({
+	  //     format: "MM dd, yyyy HH:ii P",
+	  //     showMeridian: true,
+	  //     autoclose: true,
+	  //     todayBtn: false
+	  // });
+
+	  $('.date-picker input').datepicker({
+	    autoclose: true,
+	    format: "M dd yyyy"
+	  });    
+
+	  $(".date-picker input").mousedown(function() {
+	    $(this).datepicker("hide");
+	    $(this).blur();
+	  });
+
+	  $(".datetime-picker input").mousedown(function() {
+	    $(this).datetimepicker("hide");
+	    $(this).blur();
+	  });
+
+	  $(".month-year-picker input").datepicker( {
+	      format: "mm/yyyy",
+	      minViewMode: 1,
+	      autoclose:true
+	  });
+
+	  $(".datepicker_element input").datepicker( {
+	      format: "M dd yyyy",
+	      autoclose:true
+	  });
+
+	  $('.date_picker_trigger').on('click',function(e) {
+	    e.preventDefault();
+	    $(this).closest(".datepicker_default").find("input").focus();
+	  });
+
+	  $('.datepicker_default input').on('click',function(e) {
+	    $(this).closest(".datepicker_default").find(".date_picker_trigger").click();
+	  });
+
+	  $('.datepicker_default input').on('show', function(e){
+		    console.debug('show', e.date, $(this).data('stickyDate'));
+		    
+		    if ( e.date ) {
+		         $(this).data('stickyDate', e.date);
+		    }
+		    else {
+		         $(this).data('stickyDate', null);
+		    }
+	  });
+
+	  $('.datepicker_default input').on('hide', function(e){
+		    console.debug('hide', e.date, $(this).data('stickyDate'));
+		    var stickyDate = $(this).data('stickyDate');
+		    
+		    if ( !e.date && stickyDate ) {
+		        console.debug('restore stickyDate', stickyDate);
+		        $(this).datepicker('setDate', stickyDate);
+		        $(this).data('stickyDate', null);
+		    }
+	  });
+
+		/*========================================================
+		FORM VALIDATION & RELATED FUNCTION
+		========================================================*/
+
+		// cutom validation messages and rules
+
+		//for image type
+		$.validator.addMethod("imagesonly", function (value,element) {
+      var fileExtension = ['jpg', 'png', 'jpeg'];
+      return ($.inArray(value.split('.').pop().toLowerCase(), fileExtension) != -1)
+    },"Please select a valid image file(jpg, jpeg and png are allowed)");
+
+		// for phone number
+    jQuery.validator.addMethod("phonenumber", function(value, element) {
+      return this.optional(element) || /^[0-9\-\(\)\+\s]+$/.test(value);
+    },"Please enter a Mobile Number with numeric characters only");
+
+    // for post code validation
+	  $.validator.addMethod("postcodecheck", function(value,element) {
+			return this.optional(element) || /^[a-zA-Z0-9 ]*$/i.test(value);
+		},'Invalid Postcode');
+
+	  // for website validation
+    $.validator.addMethod("website_stringvalid_caps", function (value,element) {
+      return this.optional(element) || /^http(s)?:\/\/?(www\.)?[a-zA-Z0-9]+([\-\.]{1}[a-zA-Z0-9]+)*\.[a-zA-Z]{2,5}(:[0-9]{1,5})?(\/.*)?$/.test(value);
+    },"Please enter website address in the format of http://example.in");
+
+    $.validator.addMethod("website_stringvalid", function (value,element) {
+      return this.optional(element) || /^http(s)?:\/\/?(www\.)?[a-z0-9]+([\-\.]{1}[a-z0-9]+)*\.[a-z]{2,5}(:[0-9]{1,5})?(\/.*)?$/.test(value);
+    },"Capital letters are not allowed");
+    //end
+
+
+		// Amount validation //
+
+	  jQuery.validator.addMethod("entervalidamount", function(value, element) {
+     	return this.optional( element ) || /^[0-9-]\d*(\.\d+)?$/i.test( value ) || /^(\.\d{1,2})?$/i.test( value );
+    },'Please enter valid Amount'); 
+
+    jQuery.validator.addMethod("nonegativenumberallowed", function(value, element) {
+     	return this.optional( element ) || /^[0-9]\d*(\.\d+)?$/i.test( value ) || /^(\.\d{1,2})?$/i.test( value );
+    },'Negative numbers are not allowed');
+
+    jQuery.validator.addMethod("amountnomorethan", function(value, element) {
+	    return this.optional( element ) || value <= 9999999999;
+	  },'Amount cannot be more than 9999999999');
+
+	  jQuery.validator.addMethod("onlytwodecimals", function(value, element) {
+     	return this.optional( element ) || /^[0-9]\d*(\.\d{1,2})?$/i.test( value ) || /^(\.\d{1,2})?$/i.test( value );
+    }, 'Only two decimals are allowed');
+
+	  // End //
+
+	  // for password //
+
+	  $.validator.addMethod("pwcheckchange", function(value,element) {
+			return this.optional(element) || /^(?=.*[A-Z])(?=.*\W).*$/i.test(value);
+		}, 'Password must contain one capital character and one numerical and one special character');
+
+	  jQuery.validator.addMethod("passwordnolessthan", function(value, element) {
+	    return this.optional( element ) || value.length >= 8;
+	  }, 'Password cannot be less than 8 characters');
+
+	  jQuery.validator.addMethod("passwordnomorethan", function(value, element) {
+	    return this.optional( element ) ||  value.length <= 24;
+	  }, 'Password cannot be more than 24 characters');
+
+	  // End //
+
+	  // for checking numeric values only
+		jQuery.validator.addMethod("numericonly", function(value, element) {
+     	return this.optional( element ) || /^[0-9]+$/i.test( value );
+    },  function(params, element) {
+		  return 'Please enter '+$(element).attr('input-name') +' with numerics only'
+		});
+
+		// For validating the age
+		jQuery.validator.addMethod("agenolessthan", function(value, element) {
+	    return this.optional( element ) || value >= 18;
+	  },'Age cannot be less than 18 years');
+
+	  jQuery.validator.addMethod("agenomorethan", function(value, element) {
+	    return this.optional( element ) ||  value <= 100;
+	  },'Age cannot be more than 100 years');
+
+	  //For checking alphnaueric in a string
+		jQuery.validator.addMethod("alphanumeric_notallowed", function(value, element) {
+	    return this.optional( element ) || /^[a-zA-Z ]+$/i.test( value );
+	  },  function(params, element) {
+		  return $(element).attr('input-name') + ' cannot consist of alphanumeric characters.'
+		});
+
+		// for checking Special character in a string
+	  jQuery.validator.addMethod("specialchar_notallowed", function(value, element) {
+	    return this.optional( element ) || /^[a-zA-Z0-9 ]+$/i.test( value );
+	  },'Special characters are not allowed.');
+
+	  //for email id checking
+	  jQuery.validator.addMethod("email_validation", function(value, element) {
+	    return this.optional( element ) || /^(([^<>()[\]\\.,;:\s@\"]+(\.[^<>()[\]\\.,;:\s@\"]+)*)|(\".+\"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/i.test( value );
+	  },'Email address is invalid.');
+
+	  jQuery.validator.addMethod("checksinglespace", function(value, element) {
+     	return this.optional( element ) || /^\S+(?: \S+)*$/i.test( value );
+      }, 'Only single space is allowed');
+
+	  /*========================================================
+		validation function starts here
+		========================================================*/
+		var Validator = $("#sample-form").validate({
+
+
+			ignore:"", /*(if the css properties are to be omitted for the text and the box,)
+      disable it when the css properties have to be applied like highlighting the error boxes instead of labels */
+
+			onfocusout:false,// this is for avoiding validation on focusout
+
+
+			// rules
+			rules: {
+				firstname: {
+        	minlength:3,
+        	maxlength:30,
+					required:true,
+        	specialchar_notallowed:true,// this should be always top
+        	alphanumeric_notallowed:true,
+					checksinglespace:true,
+        },
+				middlename: {
+        	minlength:1,
+        	maxlength:30,
+        	specialchar_notallowed:true,// this should be always top
+        	alphanumeric_notallowed:true,
+        	checksinglespace:true,
+        },
+				lastname: {
+        	minlength:1,
+        	maxlength:30,
+        	specialchar_notallowed:true,// this should be always top
+        	alphanumeric_notallowed:true,
+			checksinglespace:true,
+        },
+				email: {
+					required: true,
+					email: true,
+					email_validation:true
+				},
+				"confirm-email": {
+					required: true,
+					email: true,
+					equalTo: "#email"
+				},
+				address: {
+					required: true,
+        	minlength:3,
+        	maxlength:255
+        },
+        country:{
+        	required: true
+        },
+        "statecounty":{
+        	required: true
+        },
+        city:{
+        	required: true
+        },
+        companyname:{
+        	required: true,
+        	minlength:2,
+        	maxlength:70
+        },
+        gender:{
+        	required: true
+        },
+        dob:{
+        	required: true
+        },
+        summarydescription:{
+        	required: true
+        },
+        listbox:{
+        	required: true,
+        	maxlength:3
+        },
+        age:{
+        	numericonly:true,
+        	agenomorethan:true,
+        	agenolessthan:true
+        },
+        amount:{
+        	entervalidamount:true,
+        	amountnomorethan:true,
+        	nonegativenumberallowed:true,
+        	onlytwodecimals:true
+        },
+        password:{
+        	required: true,
+        	pwcheckchange:true,
+        	passwordnolessthan:true,
+        	passwordnomorethan:true
+        },
+        confirmpassword:{
+        	required:true,
+        	equalTo:  "#password"
+        },
+        websiteurl:{
+	         required: true,
+	         website_stringvalid_caps:true,
+	         website_stringvalid:true,
+	         // maxlength: 80
+	      },
+	      "post-code":{
+	      	required:true,
+        	postcodecheck:true,
+        	checksinglespace:true,
+	      	minlength:4,
+        	maxlength:9
+	      },
+	      phonenumber:{
+	          required: {
+	                    depends: function() {// for trim the input data
+	                    $(this).val($.trim($(this).val()));
+	                      return true;
+	                    }
+	                  },
+	          phonenumber: true,
+	          minlength: 5,
+	          maxlength: 15
+	      },
+	      file:{
+	      	required:true,
+	      	imagesonly:true
+	      },
+	      check: {
+            required:true,
+            maxlength:3
+        },
+			},
+
+			// error messages
+			messages: {
+				firstname: {
+					required: "Please provide a First name",
+          minlength:"First Name should be a minimum of be 3 characters",
+          maxlength:"First Name cannot be more than 30 characters"
+				},
+				middlename: {
+					minlength:"Middle Name should be atleast 1 characters long",
+          maxlength:"Middle Name not more than 30 characters"
+				},
+				lastname: {
+					minlength:"Last Name should be atleast 1 characters long",
+          maxlength:"Last Name cannot be more than 30 characters"
+				},
+				email: {
+					required: "Please enter valid email address",
+					email : "Email address is invalid"
+				},
+				"confirm-email": {
+					required: "Please re-enter email address",
+					equalTo: "Your email addresses do not match. Please try again.",
+					email : "Email address is invalid"
+				},
+				address: {
+					required: "Please enter Address",
+          minlength:"Address should be a minimum of be 3 characters",
+          maxlength:"Address cannot be more than 255 characters"
+				},
+				country:{
+        	required: "Please select a Country"
+        },
+        "statecounty":{
+        	required: "Please select a State/County"
+        },
+        city:{
+        	required: "Please select a City"
+        },
+        companyname:{
+        	required: "Please enter current Company Name",
+        	minlength:"Company Name cannot be less than 2 characters",
+        	maxlength:"Company Name cannot be more than 70 characters"
+        },
+        gender:{
+        	required:"Please choose a Gender. You can change this who can see this later."
+        },
+        dob:{
+        	required: "Select your date of birth. You can change this who can see this later."
+        },
+        summarydescription:{
+        	required: "Please enter Summary/Description"
+        },
+        listbox:{
+        	required: "Please select atleast one Sector",
+        	maxlength:"You can choose max 3 Sectors"
+        },
+        password:{
+        	required: "Please enter the Password"
+        },
+        confirmpassword:{
+        	required:"Password and Confirm password field should be matched",
+        	equalTo:"Password and Confirm password field should be matched"
+        },
+        websiteurl:{
+	          required: "Please enter Website Address/URL.",
+            // maxlength: "Website Address length should not exceed 80 characters"
+	      },
+	      "post-code":{
+	      	required:"Please enter Post Box Number or Please enter Postcode or Please enter Zip Code",
+	      	minlength:"Postcode should be a minimum of be 4 characters",
+        	maxlength:"Postcode cannot be more than 9 characters"
+	      },
+	      phonenumber:{
+	            required: "Please enter valid Mobile Number",
+	            maxlength: "Mobile Number cannot be more than 15 digits",
+	            minlength: "Mobile Number cannot be less than 5 digits"
+	      },
+	      file:{
+	      	required:"Please select a image to upload",
+	      },
+	      check:{
+            required:"Please select atleast one option",
+            maxlength:"You can choose max 3 Sectors"
+        }
+			},
+
+			errorPlacement: function(error, element) { 
+				// code for placing your error meesage in closest parent which has "element-container" class  to your element 
+        error.appendTo( element.closest('.element-container'));
+      },
+
+
+      submitHandler: function () {
+          $('#btn-submit').attr('disabled','disabled');
+          // add this script for desabling submit button to avoid multiple form submit
+          return true;
+      }
+		});
+	
+		/*========================================================
+		Add script for reseting form with respective Form ID
+		========================================================*/
+
+		$("#sample-form").find("button[type=reset]").click(function(){
+			Validator.resetForm();
+		});
+
+		/*========================================================
+		Add this class to automatically capitalize when input focus moves to another field.
+		========================================================*/
+
+		$(".makecapitalize").focusout(function() {
+      var val = $(this).val();
+      var str = val.toLowerCase().split('');
+      for(var i = 0; i < str.length; i++){
+      	  if(str[i] != " "){
+		    	str[i] = str[i].toUpperCase();
+		    	break;
+		    } 
+		  }
+		  str = str.join('');
+	    $(this).val(str);
+	    $(this).val($.trim($(this).val()));
+	  });
+
+       
+		/*========================================================
+		Add this Script for trimming string on focusout
+		========================================================*/
+		$(".trimonfocusout").focusout(function() {
+			$(this).val($.trim($(this).val()));
+		});
+		/*========================================================
+		Add this Script for hiding error messages in Realtime
+		========================================================*/
+
+	  $('body form').on("keyup paste change focusout","input,textarea",function(){
+	    	if($(this).hasClass("error") || $(this).hasClass("valid"))
+		 	  $(this).valid();
+		});
+
+	</script>
+</body>
+
+</html>
